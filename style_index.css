@@ -1,0 +1,702 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+    max-width: 100%;
+    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
+}
+
+/* App Header */
+.app-header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #388E3C;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Profile Section */
+.profile-section {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* App Content */
+.app-content {
+    padding: 15px;
+    margin-top: 80px; /* เพิ่ม margin-top เพื่อไม่ให้เนื้อหาทับกับ header */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Health Stats Section */
+.health-stats {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.health-stats h2 {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* ปรับให้แสดงผลได้ดีบนมือถือ */
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.stat-item {
+    background: #e8f5e9;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background: #c8e6c9;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #388E3C;
+}
+
+.stat-label {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Health Tips Section */
+.health-tips {
+    background: #f0f8ff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.health-tips h2 {
+    color: #1e88e5;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Tips List */
+.tips-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+/* Tip Item */
+.tip-item {
+    background: #e1f5fe;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0277bd;
+    text-align: left;
+}
+
+.tip-item:hover {
+    transform: translateY(-5px);
+    background: #b3e5fc;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    padding: 6px;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.nav-item.active {
+    color: #4CAF50;
+}
+
+.nav-item:hover {
+    color: #4CAF50;
+    transform: scale(1.1);
+}
+
+.nav-item.active .icon,
+.nav-item:hover .icon {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-header h1 {
+        font-size: 20px;
+    }
+
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+
+    .username {
+        font-size: 12px;
+    }
+
+    .health-stats h2, .health-tips h2 {
+        font-size: 16px;
+    }
+
+    .stat-value {
+        font-size: 20px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+    .tip-item {
+        font-size: 12px;
+    }
+
+    .nav-item {
+        font-size: 12px;
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header h1 {
+        font-size: 18px;
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+    .username {
+        font-size: 10px;
+    }
+
+    .health-stats h2, .health-tips h2 {
+        font-size: 14px;
+    }
+
+    .stat-value {
+        font-size: 18px;
+    }
+
+    .stat-label {
+        font-size: 8px;
+    }
+
+    .tip-item {
+        font-size: 10px;
+    }
+
+    .nav-item {
+        font-size: 10px;
+    }
+
+    .icon {
+        font-size: 16px;
+    }
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+    max-width: 100%;
+    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
+}
+
+/* App Header */
+.app-header {
+    background: linear-gradient(45deg, #4CAF50, #388E3C); /* เพิ่มการไล่สี */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #388E3C;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 0 0 15px 15px; /* เพิ่มมุมโค้ง */
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Profile Section */
+.profile-section {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    margin-right: 8px;
+    transition: transform 0.3s ease; /* เพิ่มการเคลื่อนไหว */
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); /* ขยายเมื่อ hover */
+}
+
+.username {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* App Content */
+.app-content {
+    padding: 15px;
+    margin-top: 80px; /* เพิ่ม margin-top เพื่อไม่ให้เนื้อหาทับกับ header */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Health Stats Section */
+.health-stats {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s ease; /* เพิ่มการเคลื่อนไหว */
+}
+
+.health-stats:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* เพิ่มเงาเมื่อ hover */
+}
+
+.health-stats h2 {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* ปรับให้แสดงผลได้ดีบนมือถือ */
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.stat-item {
+    background: #e8f5e9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background: #c8e6c9;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #388E3C;
+}
+
+.stat-label {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Health Tips Section */
+.health-tips {
+    background: #f0f8ff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.health-tips h2 {
+    color: #1e88e5;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Tips List */
+.tips-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+/* Tip Item */
+.tip-item {
+    background: #e1f5fe;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0277bd;
+    text-align: left;
+}
+
+.tip-item:hover {
+    transform: translateY(-5px);
+    background: #b3e5fc;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px 15px 0 0; /* เพิ่มมุมโค้ง */
+}
+
+.nav-item {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    padding: 6px;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.nav-item.active {
+    color: #4CAF50;
+}
+
+.nav-item:hover {
+    color: #4CAF50;
+    transform: scale(1.1);
+}
+
+.nav-item.active .icon,
+.nav-item:hover .icon {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-header h1 {
+        font-size: 20px;
+    }
+
+    .profile-pic {
+        width: 50px;
+        height: 50px;
+    }
+
+    .username {
+        font-size: 14px;
+    }
+
+    .health-stats h2, .health-tips h2 {
+        font-size: 16px;
+    }
+
+    .stat-value {
+        font-size: 20px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+    .tip-item {
+        font-size: 12px;
+    }
+
+    .nav-item {
+        font-size: 12px;
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header h1 {
+        font-size: 18px;
+    }
+
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+
+    .username {
+        font-size: 10px;
+    }
+
+    .health-stats h2, .health-tips h2 {
+        font-size: 14px;
+    }
+
+    .stat-value {
+        font-size: 18px;
+    }
+
+    .stat-label {
+        font-size: 8px;
+    }
+
+    .tip-item {
+        font-size: 10px;
+    }
+
+    .nav-item {
+        font-size: 10px;
+    }
+
+    .icon {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Health Goals Section */
+.health-goals {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.health-goals h2 {
+    color: #388E3C;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Goals Grid */
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* ให้แสดงผลในรูปแบบที่มีหลายคอลัมน์ตามขนาด */
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Goal Item */
+.goal-item {
+    background: #e8f5e9;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.goal-item:hover {
+    transform: translateY(-5px);
+    background: #c8e6c9;
+}
+
+.goal-value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #388E3C;
+}
+
+.goal-label {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Health Charts Section */
+.health-charts {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.health-charts h2 {
+    color: #1e88e5;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.chart {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart p {
+    color: #0277bd;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .health-goals h2, .health-charts h2 {
+        font-size: 18px;
+    }
+
+    .goal-value {
+        font-size: 20px;
+    }
+
+    .goal-label {
+        font-size: 12px;
+    }
+
+    .chart p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .health-goals h2, .health-charts h2 {
+        font-size: 16px;
+    }
+
+    .goal-value {
+        font-size: 18px;
+    }
+
+    .goal-label {
+        font-size: 10px;
+    }
+
+    .chart p {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Health Section */
+.health-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.health-section h2 {
+    font-size: 2.2rem;
+    color: #4CAF50;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.health-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+    margin-top: 2rem;
+    border-bottom: 2px solid #e4e4e4;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.health-section .intro-text {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Service List */
+.service-list,
+.price-list,
+.testimonial-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.service-list li,
+.price-list li,
+.testimonial-list li {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-list li:hover,
+.price-list li:hover,
+.testimonial-list li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-list li strong {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.service-list li p {
+    color: #888;
+    font-size: 1rem;
+}
+
+/* Price List */
+.price-list li {
+    background-color: #f9f9f9;
+    text-align: center;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.price-list li strong {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Testimonial List */
+.testimonial-list li {
+    background-color: #f1f1f1;
+    color: #555;
+    font-size: 1rem;
+    padding: 1.5rem;
+    border-left: 5px solid #4CAF50;
+}
+
+.testimonial-list li strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px 15px 0 0;
+}
+
+.bottom-nav .nav-item {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    padding: 6px;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.bottom-nav .nav-item .icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.bottom-nav .nav-item.active {
+    color: #4CAF50;
+}
+
+.bottom-nav .nav-item:hover {
+    color: #4CAF50;
+    transform: scale(1.1);
+}
+
+.bottom-nav .nav-item.active .icon,
+.bottom-nav .nav-item:hover .icon {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-list,
+    .price-list,
+    .testimonial-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .health-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .health-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-list,
+    .price-list,
+    .testimonial-list {
+        grid-template-columns: 1fr;
+    }
+
+    .health-section {
+        padding: 1rem;
+    }
+
+    .health-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .health-section h3 {
+        font-size: 1.2rem;
+    }
+}

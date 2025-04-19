@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 60px; /* เพิ่ม padding ด้านล่างเพื่อไม่ให้เนื้อหาทับกับเมนู */
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 1.5rem; /* ลดขนาด font สำหรับมือถือ */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.5rem; /* ลดขนาด font สำหรับมือถือ */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e4e4e4;
+    padding-bottom: 0.5rem;
+}
+
+/* Form Styles */
+form {
+    background: #ffffff;
+    padding: 15px; /* ลด padding */
+    border-radius: 8px; /* ลดขอบให้กลม */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    max-width: 100%;
+}
+
+label {
+    font-size: 0.9rem; /* ลดขนาดตัวอักษร */
+    color: #666;
+    display: block;
+    margin-bottom: 8px; /* ลดระยะห่าง */
+}
+
+textarea {
+    width: 100%;
+    padding: 8px; /* ลด padding */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem; /* ลดขนาดตัวอักษร */
+    margin-bottom: 12px; /* ลดระยะห่าง */
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* ลด padding */
+    border-radius: 20px; /* ลดขอบ */
+    font-size: 0.9rem; /* ลดขนาดตัวอักษร */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Profile Container */
+.profile-container {
+    width: 90%; /* ลดขนาดพื้นที่ให้เหมาะสม */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Details */
+.profile-details {
+    padding: 15px; /* ลด padding */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details p {
+    font-size: 1rem; /* ลดขนาดตัวอักษร */
+    color: #555;
+    line-height: 1.4; /* ลดระยะห่าง */
+    margin: 8px 0;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 150px; /* ลดขนาดรูปโปรไฟล์ */
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    margin-top: 10px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    position: fixed;  
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #ddd;
+    z-index: 999;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20px 20px 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Menu Items */
+.bottom-nav .nav-item {
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem; /* ลดขนาดฟอนต์ */
+    padding: 6px;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bottom-nav .nav-item .icon {
+    font-size: 20px; /* ลดขนาดไอคอน */
+    margin-bottom: 4px; /* ลดระยะห่าง */
+}
+
+.bottom-nav .nav-item.active {
+    color: #4CAF50;
+}
+
+.bottom-nav .nav-item:hover {
+    color: #4CAF50;
+    transform: scale(1.1);
+}
+
+.bottom-nav .nav-item.active .icon,
+.bottom-nav .nav-item:hover .icon {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+/* Media Queries for mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem; /* ลดขนาดฟอนต์ */
+    }
+    .profile-container {
+        width: 90%;
+    }
+    .profile-details p {
+        font-size: 0.9rem; /* ลดขนาดฟอนต์ในโปรไฟล์ */
+    }
+    .profile-pic {
+        width: 120px; /* ลดขนาดรูปโปรไฟล์ */
+        height: 120px;
+    }
+    .bottom-nav .nav-item {
+        font-size: 0.8rem; /* ลดขนาดฟอนต์ในเมนู */
+    }
+    .bottom-nav .nav-item .icon {
+        font-size: 18px; /* ลดขนาดไอคอน */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.8rem; /* ลดขนาดฟอนต์ */
+    }
+    h1 {
+        font-size: 1.2rem; /* ลดขนาดหัวข้อ */
+    }
+    .profile-container {
+        width: 90%;
+    }
+    .profile-details p {
+        font-size: 0.8rem; /* ลดขนาดฟอนต์ */
+    }
+    .profile-pic {
+        width: 100px; /* ลดขนาดรูปโปรไฟล์ */
+        height: 100px;
+    }
+    .bottom-nav .nav-item {
+        font-size: 0.7rem; /* ลดขนาดฟอนต์ */
+    }
+    .bottom-nav .nav-item .icon {
+        font-size: 16px; /* ลดขนาดไอคอน */
+    }
+}

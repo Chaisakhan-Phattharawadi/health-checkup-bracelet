@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 60px; /* เพิ่ม padding ด้านล่างเพื่อไม่ให้เนื้อหาทับกับเมนู */
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e4e4e4;
+    padding-bottom: 0.5rem;
+}
+
+/* Form Styles */
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+label {
+    font-size: 1rem;
+    color: #666;
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Problem and Answer Containers */
+.problem-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.answer-container {
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border-left: 5px solid #4CAF50;
+}
+
+.answer-container div {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Enhanced Bottom Navigation - TikTok Style */
+.bottom-nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #ddd;
+    z-index: 999;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20px 20px 0 0;
+    max-width: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+}
+
+.bottom-nav .nav-item {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    padding: 8px;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bottom-nav .nav-item .icon {
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.bottom-nav .nav-item.active {
+    color: #4CAF50;
+}
+
+.bottom-nav .nav-item:hover {
+    color: #4CAF50;
+    transform: scale(1.1);
+}
+
+.bottom-nav .nav-item.active .icon,
+.bottom-nav .nav-item:hover .icon {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+/* Enhanced Text Areas and Forms */
+textarea, input[type="text"], input[type="submit"] {
+    width: 80%;
+    margin: 10px auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+textarea:focus, input[type="text"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 3px 8px rgba(76, 175, 80, 0.2);
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bottom-nav {
+        padding: 10px 0;
+    }
+    .bottom-nav .nav-item {
+        font-size: 11px;
+    }
+    .bottom-nav .nav-item .icon {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bottom-nav {
+        padding: 8px 0;
+        max-width: 100%;
+    }
+    .bottom-nav .nav-item {
+        font-size: 10px;
+    }
+    .bottom-nav .nav-item .icon {
+        font-size: 20px;
+    }
+}

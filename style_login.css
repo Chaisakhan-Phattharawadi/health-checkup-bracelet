@@ -1,0 +1,137 @@
+/* พื้นหลังและฟอนต์ */
+body {
+    background-color: #e8f5e9; /* สีเขียวอ่อน */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container ของ Login */
+.login-container {
+    background-color: #ffffff; /* สีขาว */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 350px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header ของ Login */
+.login-header {
+    background-color: #4caf50; /* สีเขียวสด */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ฟอร์ม Login */
+form {
+    padding: 40px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #4caf50; /* สีเขียวเมื่อโฟกัส */
+    outline: none;
+}
+
+/* ปุ่ม Login */
+.btn {
+    background-color: #4caf50; /* สีเขียว */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049; /* สีเขียวเข้มเมื่อ hover */
+}
+
+/* ข้อความลิงก์ Sign Up */
+p {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+}
+
+a {
+    color: #4caf50; /* สีเขียวสำหรับลิงก์ */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animation สำหรับ fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%; /* ปรับความกว้างให้พอดีกับหน้าจอมือถือ */
+        padding: 15px;
+    }
+
+    .header {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
